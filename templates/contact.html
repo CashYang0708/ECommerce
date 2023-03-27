@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+    <div class="p-3 m-3">
+        <div class="col-lg-5 rounded mx-auto border pt-4">
+            <div class="text-center col">
+            </div>
+            <h3 class="alert alert-light rounded-pill" style="text-align:center" >Reserve</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p }}
+                <button type="submit" class="btn btn-sm btn-success col-lg-12">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load custom_filter %}
+    <div class="container">
+    <div class="border rounded p-4 m-4">
+        {% for d in decoration %}
+            <img class="card-img-top" src="{{d.picture.url}}" alt="Card image cap">
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}

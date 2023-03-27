@@ -1,7 +1,7 @@
 # ECommerce
 A simple Ecommerce website developed by Python Django framework   
 
-Clone this repository into a folder on your computer
+Clone this repository into a folder on your computer 
 1.Download Python
 2.Open terminal inside the folder with code.
 3.Type pip install -r requirements.txt in the terminal window to install all the requirements to run the app.

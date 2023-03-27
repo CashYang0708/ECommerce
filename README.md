@@ -1,5 +1,5 @@
 # ECommerce
-A simple Ecommerce website developed by Python Django framework
+- A simple Ecommerce website developed by Python Django framework
 
 Clone this repository into a folder on your computer
 1.Download Python

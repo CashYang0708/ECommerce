@@ -4,31 +4,30 @@ from store.models import Member
 from django.views import View
 
 
-class Signup (View):
+class Signup(View):
     def get(self, request):
-        return render (request, 'signup.html')
+        return render(request, "signup.html")
 
     def post(self, request):
         postData = request.POST
-        username=postData.get('username')
-        password = postData.get ('password')
+        username = postData.get("username")
+        password = postData.get("password")
         # validation
-        value = {'username' : username,}
+        value = {
+            "username": username,
+        }
         error_message = None
 
-        member = Member (username = username,password=password)
-        error_message = self.validatemember (member)
+        member = Member(username=username, password=password)
+        error_message = self.validatemember(member)
 
         if not error_message:
-            member.password = make_password (member.password)
-            member.register ()
-            return redirect ('homepage')
+            member.password = make_password(member.password)
+            member.register()
+            return redirect("homepage")
         else:
-            data = {
-                'error': error_message,
-                'values': value
-            }
-            return render (request, 'signup.html', data)
+            data = {"error": error_message, "values": value}
+            return render(request, "signup.html", data)
 
     def validatemember(self, member):
         error_message = None
